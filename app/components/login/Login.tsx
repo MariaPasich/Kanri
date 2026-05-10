@@ -1,11 +1,12 @@
 import { useState } from "react";
+import Header from "../header/Header";
 
 export default function Login() {
   const [email, setEmail] = useState<string>("");
   const [pass, setPass] = useState<string>("");
   const [username, setUsername] = useState<string>("");
 
-    /* ---------------- INPUT HANDLERS ---------------- */
+  /* ---------------- INPUT HANDLERS ---------------- */
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
 
@@ -75,22 +76,32 @@ export default function Login() {
   };
 
   return (
-    <main>
-      <h1>Kanri - Login</h1>
-      <br/>
-      <br/>
-      <label htmlFor="email">Email: </label>
-      <input type="text" name="email" id="email" />
+    <main className="bg-[#FBFBFD] flex flex-col min-h-screen m-0 text-black">
+      <Header />
 
-      <label htmlFor="username">Username: </label>
-      <input type="text" name="username" id="username" />
+      <div className="pt-20">
+        <h1>Увійти в акаунт</h1>
+        <p>Почніть керувати задачами <br/> разом з командою</p>
+        <img src="/logo_trans.png" alt="Almost transparent Kanri logo" width={300} height={400} />
+      </div>
 
-      <label htmlFor="password">Password: </label>
-      <input type="text" name="password" id="password" />
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="email">Email: </label>
+        <input type="text" name="email" id="email" />
 
-      <button onClick={handleSubmit}>Submit</button>
+        <label htmlFor="username">Username: </label>
+        <input type="text" name="username" id="username" />
 
-      <h3>No account? <a href="../register">Register now!</a></h3>
+        <label htmlFor="password">Password: </label>
+        <input type="text" name="password" id="password" />
+
+        <button onClick={handleSubmit}>Submit</button>
+
+        <h3>
+          No account? <a href="../register">Register now!</a>
+        </h3>
+      </form>
+      {/*  */}
     </main>
   );
 }
