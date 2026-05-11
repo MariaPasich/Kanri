@@ -2,9 +2,11 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='absolute top-0 left-0 w-full bg-white py-4 shadow-sm inline'>
-      <img src="/logo_header.png" alt="Kanri logo" className='float-left' />
-      <h1 className='font-bold text-gray-800 font-title text-3xl align-middle'>Kanri</h1>
+    <header className='fixed top-0 left-0 w-full bg-white py-4 shadow-sm z-50'>
+      <div className='container mx-auto px-4 flex items-center gap-3'>
+        <img src="/logo_header.png" alt="Kanri logo" className='h-8' />
+        <h1 className='font-bold text-black text-4xl'>Kanri</h1>
+      </div>
     </header>
   )
 }

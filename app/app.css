@@ -1,12 +1,10 @@
 @import "tailwindcss";
-@import '@fontsource/inter';
+@import "tailwindcss/preflight";
 
-@tailwind base;
-@tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply font-sans text-gray-600;
+    @apply font-['Inter'] text-[#9CA3AF];
   }
 }
