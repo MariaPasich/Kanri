@@ -86,20 +86,21 @@ export default function Login() {
       </div>
 
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Email: </label>
-        <input type="text" name="email" id="email" />
+        <label htmlFor="email">Пошта: </label>
+        <input type="text" name="email" id="email" placeholder="Введіть вашу пошту" />
 
-        <label htmlFor="username">Username: </label>
-        <input type="text" name="username" id="username" />
+        <label htmlFor="username">Ім'я: </label>
+        <input type="text" name="username" id="username" placeholder="Введіть ваше ім’я" />
 
-        <label htmlFor="password">Password: </label>
-        <input type="text" name="password" id="password" />
+        <label htmlFor="password">Пароль: </label>
+        <input type="text" name="password" id="password" placeholder="Введіть пароль" />
 
-        <button onClick={handleSubmit}>Submit</button>
+        <button onClick={handleSubmit}
+        className="bg-linear-to-r from-[#407EF9] to-[#7242D9] text-white! shadow-none focus:ring-4 text-base focus:ring-blue-300! font-medium! rounded-3xl! px-24! py-3! focus:outline-none dark:focus:ring-blue-800">Увійти</button>
 
-        <h3>
-          No account? <a href="../register">Register now!</a>
-        </h3>
+        <div>
+          <p className="text-[#374151]">Не маєте акаунту?</p> <a href="../register" className="text-[#3B82F6]">Зареєструватися</a>
+        </div>
       </form>
       {/*  */}
     </main>

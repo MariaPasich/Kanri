@@ -7,4 +7,8 @@
   body {
     @apply font-['Inter'] text-[#9CA3AF];
   }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 }
