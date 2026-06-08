@@ -80,26 +80,57 @@ export default function Login() {
       <Header />
 
       <div className="pt-20">
-        <h1>Увійти в акаунт</h1>
-        <p>Почніть керувати задачами <br/> разом з командою</p>
-        <img src="/logo_trans.png" alt="Almost transparent Kanri logo" width={300} height={400} />
+        <div className="px-4 text-center">
+          <h1>Увійти в акаунт</h1>
+          <p>
+            Почніть керувати задачами <br /> разом з командою
+          </p>
+          <img
+            src="/logo_trans.png"
+            alt="Almost transparent Kanri logo"
+            width={300}
+            height={400}
+          />
+        </div>
       </div>
 
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">Пошта: </label>
-        <input type="text" name="email" id="email" placeholder="Введіть вашу пошту" />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Введіть вашу пошту"
+        />
 
         <label htmlFor="username">Ім'я: </label>
-        <input type="text" name="username" id="username" placeholder="Введіть ваше ім’я" />
+        <input
+          type="username"
+          name="username"
+          id="username"
+          placeholder="Введіть ваше ім’я"
+        />
 
         <label htmlFor="password">Пароль: </label>
-        <input type="text" name="password" id="password" placeholder="Введіть пароль" />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Введіть пароль"
+        />
 
-        <button onClick={handleSubmit}
-        className="bg-linear-to-r from-[#407EF9] to-[#7242D9] text-white! shadow-none focus:ring-4 text-base focus:ring-blue-300! font-medium! rounded-3xl! px-24! py-3! focus:outline-none dark:focus:ring-blue-800">Увійти</button>
+        <button
+          onClick={handleSubmit}
+          className="bg-linear-to-r from-[#407EF9] to-[#7242D9] text-white! shadow-none focus:ring-4 text-base focus:ring-blue-300! font-medium! rounded-3xl! px-24! py-3! focus:outline-none dark:focus:ring-blue-800"
+        >
+          Увійти
+        </button>
 
         <div>
-          <p className="text-[#374151]">Не маєте акаунту?</p> <a href="../register" className="text-[#3B82F6]">Зареєструватися</a>
+          <p className="text-[#374151]">Не маєте акаунту?</p>{" "}
+          <a href="../register" className="text-[#3B82F6]">
+            Зареєструватися
+          </a>
         </div>
       </form>
       {/*  */}
